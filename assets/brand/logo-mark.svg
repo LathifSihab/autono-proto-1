@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 8 44 51" fill="none"
+     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+     role="img" aria-label="Prestige Automobile">
+  <title>Prestige Automobile</title>
+  <!-- Crest: flat-top shield tapering to a point. -->
+  <path d="M17 10H47a5 5 0 0 1 5 5v16c0 13-8 19-20 26-12-7-20-13-20-26V15a5 5 0 0 1 5-5Z" stroke-width="4"/>
+  <!-- Grille: three slats, centre slat longest, following the taper. -->
+  <path d="M23 23v15M32 21v22M41 23v15" stroke-width="3.3"/>
+</svg>

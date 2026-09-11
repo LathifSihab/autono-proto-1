@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------------
+   LuxAuto / Prestige Automobile — design tokens
+   Copied verbatim from the Automo design system (../../tokens/*.css)
+   so this prototype is self-contained and can be dropped on any host.
+   Do not hand-edit: re-copy from the design system if tokens change.
+   Order matches ../../styles.css: fonts, colors, typography, spacing,
+   radii, elevation, motion, base.
+   ------------------------------------------------------------------ */
+
+/* --- tokens/fonts.css --- */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+:root{--font-core:"Urbanist",-apple-system,"Segoe UI",sans-serif;--font-display:"Urbanist",-apple-system,"Segoe UI",sans-serif;--font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace}
+
+/* --- tokens/colors.css --- */
+:root{
+/* base — ink */
+--ink-black:#000000;--ink-900:#0a0a0a;--ink-850:#0c0c0c;--ink-800:#0e0e0e;--ink-750:#141414;--ink-700:#1a1a1a;--ink-600:#232323;--ink-500:#2e2e2e;
+/* base — light */
+--white:#ffffff;--grey-100:#f4f4f4;--grey-300:#c9c9c9;--grey-500:#8f8f8f;--grey-600:#6e6e6e;
+/* base — brand */
+--yellow-500:#dfac29;--yellow-400:#e9bd48;--yellow-600:#b88b2b;--red-500:#e82127;--red-600:#c31a1f;
+/* base — alpha (line + veil work on photography) */
+--alpha-line:rgba(255,255,255,.08);--alpha-line-strong:rgba(255,255,255,.16);--alpha-fill:rgba(255,255,255,.04);--alpha-fill-hover:rgba(255,255,255,.08);--alpha-veil:rgba(0,0,0,.55);
+
+/* semantic — surface */
+--surface-page:var(--ink-800);--surface-card:var(--ink-850);--surface-raised:var(--ink-750);--surface-pill:rgba(255,255,255,.04);--surface-inverse:var(--white);
+/* semantic — text */
+--text-primary:var(--white);--text-secondary:var(--grey-300);--text-muted:var(--grey-500);--text-on-brand:var(--ink-black);--text-on-inverse:var(--ink-800);
+/* semantic — line */
+--border-subtle:var(--alpha-line);--border-strong:var(--alpha-line-strong);--border-focus:var(--yellow-500);
+/* semantic — action */
+--action-primary:var(--yellow-500);--action-primary-hover:var(--yellow-400);--action-primary-press:var(--yellow-600);--action-danger:var(--red-500);--action-danger-hover:var(--red-600);
+/* semantic — status */
+--status-available:var(--yellow-500);--status-sold:var(--red-500);--status-neutral:var(--grey-500);
+}
+
+/* --- tokens/typography.css --- */
+:root{
+--fw-regular:400/* @kind font */;--fw-medium:500/* @kind font */;--fw-semibold:600/* @kind font */;--fw-bold:700/* @kind font */;
+/* display — the chrome-lit hero wordmark; always uppercase, tight, huge */
+--type-hero-size:clamp(56px,9.5vw,148px);--type-hero-lh:.92;--type-hero-ls:-.02em;--type-hero-weight:var(--fw-bold);
+--type-display-size:56px;--type-display-lh:1.08;--type-display-ls:-.02em;
+/* headings */
+--type-h1-size:44px;--type-h1-lh:1.1;--type-h1-ls:-.02em;
+--type-h2-size:32px;--type-h2-lh:1.15;--type-h2-ls:-.015em;
+--type-h3-size:24px;--type-h3-lh:1.2;--type-h3-ls:-.01em;
+--type-h4-size:18px;--type-h4-lh:1.3;--type-h4-ls:-.005em;
+/* body */
+--type-body-size:16px;--type-body-lh:1.55;--type-body-ls:0;
+--type-body-sm-size:14px;--type-body-sm-lh:1.5;
+--type-caption-size:12px;--type-caption-lh:1.4;--type-caption-ls:.01em;
+--type-micro-size:10px;--type-micro-lh:1.3;--type-micro-ls:.04em;
+/* roles */
+--text-nav:var(--type-body-sm-size);--text-price:var(--type-body-sm-size);--text-label:var(--type-caption-size);
+}
+
+/* --- tokens/spacing.css --- */
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;--space-32:128px;
+/* grid — desktop spec from the brand grid sheet */
+--grid-columns:12/* @kind other */;--grid-gutter:24px;--grid-margin:84px;--grid-max:1176px;
+--container:1176px;--container-wide:1440px;
+--section-y:var(--space-20);--card-pad:var(--space-4);--pill-pad-x:var(--space-4);--pill-pad-y:var(--space-2);
+}
+
+/* --- tokens/radii.css --- */
+:root{--radius-xs:6px;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--radius-app-icon:22%;--radius-pill:999px;--radius-card:var(--radius-md);--radius-media:var(--radius-sm);--radius-control:var(--radius-pill)}
+
+/* --- tokens/elevation.css --- */
+:root{
+/* LuxAuto separates surfaces with hairlines, not drop shadows. Shadows only glow. */
+--shadow-none:none;
+--shadow-card:0 1px 0 0 rgba(255,255,255,.03) inset;
+--shadow-lift:0 12px 32px -12px rgba(0,0,0,.8);
+--glow-brand:0 0 0 1px rgba(223,172,41,.35),0 8px 28px -8px rgba(223,172,41,.45);
+--glow-headlight:0 0 60px 10px rgba(255,255,255,.12);
+--veil-bottom:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 60%)/* @kind other */;
+--veil-top:linear-gradient(to bottom,rgba(0,0,0,.75) 0%,rgba(0,0,0,0) 55%)/* @kind other */;
+--chrome-text:linear-gradient(178deg,#ffffff 0%,#d8d8d8 34%,#8e8e8e 52%,#f2f2f2 66%,#5c5c5c 100%)/* @kind other */;
+}
+
+/* --- tokens/motion.css --- */
+:root{--ease-standard:cubic-bezier(.4,0,.2,1)/* @kind other */;--ease-out:cubic-bezier(.16,1,.3,1)/* @kind other */;--ease-in:cubic-bezier(.7,0,.84,0)/* @kind other */;--dur-fast:120ms/* @kind other */;--dur-base:200ms/* @kind other */;--dur-slow:400ms/* @kind other */;--dur-reveal:700ms/* @kind other */;--transition-control:all var(--dur-base) var(--ease-standard)/* @kind other */;--transition-media:transform var(--dur-slow) var(--ease-out)/* @kind other */}
+
+/* --- tokens/base.css --- */
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-core);font-size:var(--type-body-size);line-height:var(--type-body-lh);font-weight:var(--fw-regular);text-wrap:pretty}
+a{color:var(--text-primary);text-decoration:none;transition:var(--transition-control)}
+a:hover{color:var(--action-primary)}
+::selection{background:var(--yellow-500);color:var(--ink-black)}
+
